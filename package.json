@@ -1,7 +1,8 @@
 {
 	"name": "@halivert/simple.css",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Simple css stylesheet",
+	"main": "css/simple.css",
 	"repository": "git+https://github.com/halivert/simple.css.git",
 	"author": "halivert",
 	"license": "MIT",
