@@ -1,0 +1,25 @@
+{
+	"name": "@halivert/simple.css",
+	"version": "0.1.0",
+	"description": "Simple css stylesheet",
+	"repository": "git+https://github.com/halivert/simple.css.git",
+	"author": "halivert",
+	"license": "MIT",
+	"files": ["sass", "css"],
+	"scripts": {
+		"build": "$npm_execpath run build-sass && $npm_execpath run build-postcss && $npm_execpath run build-min",
+		"build-postcss": "postcss --use autoprefixer --map false --output css/simple.css css/simple.css",
+		"build-sass": "sass sass/simple.scss css/simple.css",
+		"build-min": "cleancss -o css/simple.min.css css/simple.css",
+		"watch": "$npm_execpath run build-sass --watch",
+		"clean": "rm -rf css/*",
+		"deploy": "$npm_execpath run clean && $npm_execpath run build"
+	},
+	"devDependencies": {
+		"autoprefixer": "^10.3.5",
+		"clean-css-cli": "^5.3.3",
+		"postcss": "^8.3.7",
+		"postcss-cli": "^9.0.0",
+		"sass": "^1.42.1"
+	}
+}

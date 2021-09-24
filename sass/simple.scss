@@ -1,0 +1,63 @@
+@use "colors";
+
+@import url("https://fonts.googleapis.com/css2?family=Yaldevi:wght@400;600;700&display=swap");
+
+*,
+::before,
+::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	@each $colorName, $hsl in colors.$colors {
+		--#{$colorName}: #{$hsl};
+	}
+}
+
+body {
+	min-height: 100vh;
+	width: 100%;
+	background-color: var(--background);
+	color: var(--text);
+	font-size: 18px;
+	font-weight: 400;
+	padding: 1rem;
+	font-family: Yaldevi, sans-serif;
+	line-height: 1.5;
+	text-rendering: optimizeLegibility;
+}
+
+fieldset {
+	border: none;
+	padding: 1rem;
+
+	> div:not(:last-child) {
+		margin-bottom: 0.5em;
+	}
+}
+
+legend {
+	font-size: 1.1em;
+	color: var(--text-secondary);
+}
+
+label {
+	font-weight: 600;
+	margin-right: 0.5em;
+}
+
+input,
+button,
+textarea {
+	accent-color: var(--neutral);
+	appearance: none;
+	border: none;
+	border-radius: 4px;
+}
+
+input,
+textarea {
+	padding: 0.5em 0.75em;
+}
