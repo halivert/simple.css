@@ -1,12 +1,15 @@
 {
 	"name": "@halivert/simple.css",
-	"version": "0.1.1",
+	"version": "0.2.0",
 	"description": "Simple stylesheet for simple forms",
 	"main": "css/simple.css",
 	"repository": "git+https://github.com/halivert/simple.css.git",
 	"author": "halivert",
 	"license": "MIT",
-	"files": ["sass", "css"],
+	"files": [
+		"sass",
+		"css"
+	],
 	"scripts": {
 		"build": "$npm_execpath run build-sass && $npm_execpath run build-postcss && $npm_execpath run build-min",
 		"build-postcss": "postcss --use autoprefixer --map false --output css/simple.css css/simple.css",
